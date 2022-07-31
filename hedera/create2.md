@@ -88,7 +88,7 @@ function getContractAddress(address owner_) public view returns (address) {
 }
 ```
 
-This looks a bit intimidating, but is the original calculation method parameterized and put into a view function. Let's read this code from the outside in.
+This looks a bit intimidating, but is simply the original calculation method parameterized and put into a view function. Let's break this code down from the inside out.
 
 We first encode the creation code of the smart contract that is being deployed along with any contructor arguments, and then take the keccak256 hash of the resulting value. This represents the 4th argument in the CREATE2 opcode.
 ```
